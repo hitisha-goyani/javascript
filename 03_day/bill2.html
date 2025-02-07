@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bill</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <script rel="stylesheet" href="bootstrap.bundle.min.js"></script>
+
+    <style>
+        b{
+            padding:0px 20px
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5 border border-danger">
+    <h3 class="text-black bg-secondary-subtle p-3 text-center rounded-1 border border-4 border-secondary ">Billing System</h3>
+    <div class="d-flex justify-content-around border border-4 p-2 rounded-1  border-secondary bg-secondary-subtle text-black">
+        <div class="name">
+            <label for="">Customer Name:</label>
+            <input type="text" id="c_name">
+        </div>
+        <div class="no">
+            <label for="">Contact No:</label>
+            <input type="number" id="c_number">
+
+        </div>
+        <div class="billno">
+            <label for="">Bill No:</label>
+            <input type="number">
+
+        </div>
+        
+
+    </div>
+    <br>
+
+    <div class="border border-4 p-2 rounded-1  border-secondary bg-secondary-subtle text-black " >
+       
+        <label for="">Noodles(1 pack):</label>
+            <input type="number" id="noodles">
+
+            <br>
+            <br>
+            <label for="">lays(10 rs):</label>
+            <input type="number" id="lays">
+
+            <br>
+            <br>
+            <label for="">oreo(20 rs):</label>
+            <input type="number" id="oreo">
+
+            <br>
+            <br>
+
+
+
+        
+    </div>
+    <div class="border border-4 p-2 rounded-1  text-black bg-light " style="width:400px" >
+
+        <div class="row">
+            <div class="col-12">
+                <b id="c_name1"></b>
+
+                <p>*********************************************</p>
+            </div>
+            <div class="col-8">
+                <label for="">cxoster name:</label>
+                <br/>
+                <br/>
+                <label for="">lays(10 rs):</label>
+                <br/>
+                <br/>
+                <label for="">oreo(20 rs):</label>
+            </div>
+            <div class="col-2">
+                <b id="noodles1"></b>
+                <br/>
+                <br/>
+                <b id="lays1"></b>
+                <br/>
+                <br/>
+                <b id ="oreo1"></b>
+            </div>
+            <div class="col-2">
+                <b id="noodles2"></b>
+                <br/>
+                <br/>
+                <b id="lays2"></b>
+                <br/>
+                <br/>
+                <b id ="oreo2"></b>
+            </div>
+        </div>
+
+        <!-- <label for="">cxoster name:</label>
+        <b id="c_name1"></b>
+
+        <p>*********************************************</p>
+        <label for="">Noodles(1 pack):</label>
+            <b id="noodles1"></b>
+            <b id="noodles2"></b>
+
+            <br>
+            <br>
+            <label for="">lays(10 rs):</label>
+            <b id="lays1"></b>
+            <b id="lays2"></b>
+
+            <br>
+            <br>
+            <label for="">oreo(20 rs):</label>
+            <b id ="oreo1"></b>
+            <b id ="oreo2"></b>
+
+            <br>
+            <br> -->
+
+
+
+        
+    </div>
+
+    <br>
+    <div class="border border-4 p-2 rounded-1  border-secondary bg-secondary-subtle text-black " >
+        <div class="d-flex"> 
+            <button id="bill">bill</button>
+        <p class="text" id="total"></p>
+    </div>
+       
+    </div>
+</div>
+    
+</body>
+
+<script>
+    document.getElementById("bill").onclick = function(){
+
+    let c_name = document.getElementById("c_name").value
+
+
+    let noodles = document.getElementById("noodles").value
+    let lays = document.getElementById("lays").value
+    let oreo= document.getElementById("oreo").value
+
+   
+
+    document.getElementById("c_name1").innerHTML = c_name
+
+    document.getElementById("noodles1").innerHTML = noodles
+    document.getElementById("lays1").innerHTML = lays
+    document.getElementById("oreo1").innerHTML = oreo
+
+    document.getElementById("noodles2").innerHTML = noodles*50 
+    document.getElementById("lays2").innerHTML =lays*60
+    document.getElementById("oreo2").innerHTML = oreo*80;
+
+    document.getElementById("total").innerHTML = noodles*50 + lays*60+ oreo*80;
+
+
+    }
+   
+</script>
+</html>

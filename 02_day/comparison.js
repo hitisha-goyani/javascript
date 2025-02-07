@@ -1,7 +1,7 @@
 let num = 50;
 let num2="50"
 
-console.log(num=="20")//false
+console.log(num=="50")//true
 console.log(num==50)//true
 
 console.log(num2=="50")//true
