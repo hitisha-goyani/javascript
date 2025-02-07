@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bill</title>
+</head>
+<body>
+    <div class="container w-25">
+        <label for="">no</label>:
+        <input type="text" id="no1">
+            <br/>
+            <br/>
+        <label for="">name</label>:
+        <input type="text" id="name1">
+            <br/>
+            <br/>
+        <label for="">email</label>:
+        <input type="text" id="email1">
+        <br/>
+        <br/>
+        <button id="bill">show bill</button>
+    </div>
+
+<hr>
+
+<table class="table w-25 m-auto border">
+<tr>
+    <th>NO.</th>
+    <th>name</th>
+    <th>emmail</th>
+</tr>
+<tr>
+    <td id="no"></td>
+    <td id="name"></td>
+    <td id="email"></td>
+</tr>
+</table>
+
+
+    
+</body>
+<script>
+    document.getElementById("bill").onclick = function(){
+
+let no = document.getElementById("no1").value;
+let name = document.getElementById("name1").value;
+let email = document.getElementById("email1").value;
+
+
+document.getElementById("no").innerHTML = no
+document.getElementById("name").innerHTML = name
+document.getElementById("email").innerHTML = email
+
+
+}
+
+    </script>
+</html>

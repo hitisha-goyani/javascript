@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<table border>
+    <tr>
+        <th>item</th>
+        <th>price</th>
+        <th>que</th>
+    </tr>
+    <tr>
+        <td>chocolate</td>
+        <td>20/-</td>
+        <td> <input type="number" id="choco"> </td>
+    </tr>
+    <tr>
+        <td>chips</td>
+        <td>10/-</td>
+        <td> <input type="number" id="chip"> </td>
+    </tr>
+    <tr>
+        <td>cookies</td>
+        <td>15/-</td>
+        <td> <input type="number" id="cook"> </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <button id="bill">Bill</button>
+        </td>
+    </tr>
+</table>
+
+
+
+<hr>
+<br/>
+<br/>
+<br/>
+
+
+
+<table border>
+    <tr>
+        <th>item</th>
+        <th>price</th>
+        <th>que</th>
+        <th>total</th>
+    </tr>
+    <tr>
+        <td>chocolate</td>
+        <td>20/-</td>
+        <td id="choco1">  </td>
+        <td id="choco2"> </td>
+    </tr>
+    <tr>
+        <td>chips</td>
+        <td>10/-</td>
+        <td id="chip1">  </td>
+        <td id="chip2"> </td>
+    </tr>
+    <tr>
+        <td>cookies</td>
+        <td>15/-</td>
+        <td id="cook1"> </td>
+        <td id="cook2"> </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+          total of all =  
+        </td>
+        <td colspan="2" id="total">
+           
+        </td>
+    </tr>
+</table>
+    
+</body>
+
+
+
+<script>
+
+     document.getElementById("bill").onclick = function(){
+    
+    let choco = document.getElementById("choco").value;
+    let chip = document.getElementById("chip").value;
+    let cook = document.getElementById("cook").value;
+    
+    
+    document.getElementById("choco1").innerHTML = choco
+    document.getElementById("chip1").innerHTML = chip
+    document.getElementById("cook1").innerHTML = cook
+    
+    
+    document.getElementById("choco2").innerHTML = choco * 20
+    document.getElementById("chip2").innerHTML = chip * 10
+    document.getElementById("cook2").innerHTML = cook * 15
+    
+    document.getElementById("total").innerHTML = choco*20 + chip*10 + cook*15;
+    
+    }
+    
+    </script>
+
+
+
+</html>
