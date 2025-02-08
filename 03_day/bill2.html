@@ -67,16 +67,20 @@
 
                 <p>*********************************************</p>
             </div>
-            <div class="col-8">
-                <label for="">cxoster name:</label>
+            <div class="col-6">
+                <label for="">Item name</label>
+                <p>-----------------</p>
+                <label for="">Noodles:</label>
                 <br/>
                 <br/>
-                <label for="">lays(10 rs):</label>
+                <label for="">Lays(10 rs):</label>
                 <br/>
                 <br/>
-                <label for="">oreo(20 rs):</label>
+                <label for="">Oreo(20 rs):</label>
             </div>
-            <div class="col-2">
+            <div class="col-3">
+                <label for="">Qty</label>
+                <p>------</p>
                 <b id="noodles1"></b>
                 <br/>
                 <br/>
@@ -84,8 +88,12 @@
                 <br/>
                 <br/>
                 <b id ="oreo1"></b>
+                <label for="">Sub Total</label>
             </div>
-            <div class="col-2">
+            <div class="col-3">
+                <label for="">Price</label>
+                <p>------</p>
+
                 <b id="noodles2"></b>
                 <br/>
                 <br/>
@@ -96,39 +104,17 @@
             </div>
         </div>
 
-        <!-- <label for="">cxoster name:</label>
-        <b id="c_name1"></b>
-
-        <p>*********************************************</p>
-        <label for="">Noodles(1 pack):</label>
-            <b id="noodles1"></b>
-            <b id="noodles2"></b>
-
-            <br>
-            <br>
-            <label for="">lays(10 rs):</label>
-            <b id="lays1"></b>
-            <b id="lays2"></b>
-
-            <br>
-            <br>
-            <label for="">oreo(20 rs):</label>
-            <b id ="oreo1"></b>
-            <b id ="oreo2"></b>
-
-            <br>
-            <br> -->
-
+       
 
 
         
     </div>
 
     <br>
-    <div class="border border-4 p-2 rounded-1  border-secondary bg-secondary-subtle text-black " >
+    <div class="border border-4 p-1 rounded-1  border-secondary bg-secondary-subtle text-black " >
         <div class="d-flex"> 
             <button id="bill">bill</button>
-        <p class="text" id="total"></p>
+        <p class="text ms-2 border border-secondary" id="total"></p>
     </div>
        
     </div>
@@ -147,7 +133,6 @@
     let oreo= document.getElementById("oreo").value
 
    
-
     document.getElementById("c_name1").innerHTML = c_name
 
     document.getElementById("noodles1").innerHTML = noodles
@@ -158,7 +143,7 @@
     document.getElementById("lays2").innerHTML =lays*60
     document.getElementById("oreo2").innerHTML = oreo*80;
 
-    document.getElementById("total").innerHTML = noodles*50 + lays*60+ oreo*80;
+    document.getElementById("total").innerHTML = noodles*50 + lays*10 + oreo*20;
 
 
     }
