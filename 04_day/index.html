@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="c_fn">
+        
+
+        </div>
+    </div>
+    
+</body>
+
+<script>
+
+    let sum =0;
+    let n = window.prompt("enter card value");
+
+    let car_id=document.getElementById('c_fn');
+
+
+    for(let i=0;i<n;i++){
+
+        sum +=i;
+
+        car_id.innerHTML+=`<div class="card" >
+  <img width="100px" src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?cs=srgb&dl=pexels-pixabay-56866.jpg&fm=jpg" class="card-img-top " alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>`
+       
+
+
+    }
+
+</script>
+
+
+</html>

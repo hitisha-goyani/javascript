@@ -15,8 +15,9 @@
 </head>
 <body>
 
-<div class="container my-5 border border-danger">
+<div class="container my-2 border shadow-sm rounded-1 bg-body-secondary p-3">
     <h3 class="text-black bg-secondary-subtle p-3 text-center rounded-1 border border-4 border-secondary ">Billing System</h3>
+    <br>
     <div class="d-flex justify-content-around border border-4 p-2 rounded-1  border-secondary bg-secondary-subtle text-black">
         <div class="name">
             <label for="">Customer Name:</label>
@@ -29,7 +30,7 @@
         </div>
         <div class="billno">
             <label for="">Bill No:</label>
-            <input type="number">
+            <input type="number" id="c_bill">
 
         </div>
         
@@ -37,46 +38,58 @@
     </div>
     <br>
 
+
     <div class="border border-4 p-2 rounded-1  border-secondary bg-secondary-subtle text-black " >
        
-        <label for="">Noodles(1 pack):</label>
+        <label for="" id="na1">Noodles(1 pack):</label>
             <input type="number" id="noodles">
 
             <br>
             <br>
-            <label for="">lays(10 rs):</label>
+            
+            <label for=" " id="">lays(10 rs):</label>
             <input type="number" id="lays">
 
             <br>
             <br>
             <label for="">oreo(20 rs):</label>
             <input type="number" id="oreo">
-
-            <br>
-            <br>
-
-
-
         
     </div>
-    <div class="border border-4 p-2 rounded-1  text-black bg-light " style="width:400px" >
+
+
+    <br>
+     
+    <div class="border border-4  rounded-1  text-black bg-light p-3 " style="width:400px" >
+        <div class="border border-2 py-2 rounded-1  border-secondary bg-secondary-subtle text-black text-center" >
+           <b> HG Mall</b>
+            </div>
+            <br>
 
         <div class="row">
             <div class="col-12">
-                <b id="c_name1"></b>
+                <p>Customer name:
+                <b id="c_name1"></b></p>
+                
+                <p>Contact no :
+                    <b id="c_no1"></b></p>
+
+                <p>bill no :
+                        <b id="c_bill1"></b></p>
+    
 
                 <p>*********************************************</p>
             </div>
             <div class="col-6">
-                <label for="">Item name</label>
+                <label for="" >Item name</label>
                 <p>-----------------</p>
-                <label for="">Noodles:</label>
+                <label for="" id= >Noodles</label>
                 <br/>
                 <br/>
-                <label for="">Lays(10 rs):</label>
+                <label for="" >lays(10 rs):</label>
                 <br/>
                 <br/>
-                <label for="">Oreo(20 rs):</label>
+                <label for="">oreo(20 rs):  </label>
             </div>
             <div class="col-3">
                 <label for="">Qty</label>
@@ -88,6 +101,8 @@
                 <br/>
                 <br/>
                 <b id ="oreo1"></b>
+                <br>
+                <br>
                 <label for="">Sub Total</label>
             </div>
             <div class="col-3">
@@ -101,23 +116,26 @@
                 <br/>
                 <br/>
                 <b id ="oreo2"></b>
+                <br>
+                <br>
+                <b id="total"></b>
             </div>
         </div>
-
-       
-
+        <br>
 
         
     </div>
+    <br>
+    
+            <div class="border border-4 p-2 w-25 rounded-1  border-secondary bg-secondary-subtle text-black text-center" > 
+                <button  class= "border border-2 border-secondary rounded-1 px-3 py-1" id="bill">Bill</button>
+         
+        </div>
+           
+        </div>
 
     <br>
-    <div class="border border-4 p-1 rounded-1  border-secondary bg-secondary-subtle text-black " >
-        <div class="d-flex"> 
-            <button id="bill">bill</button>
-        <p class="text ms-2 border border-secondary" id="total"></p>
-    </div>
-       
-    </div>
+   
 </div>
     
 </body>
@@ -126,6 +144,8 @@
     document.getElementById("bill").onclick = function(){
 
     let c_name = document.getElementById("c_name").value
+    let c_number=document.getElementById("c_number").value
+    let c_bill = documnet.getElementById("c_bill").value
 
 
     let noodles = document.getElementById("noodles").value
@@ -134,14 +154,19 @@
 
    
     document.getElementById("c_name1").innerHTML = c_name
+    document.getElementById("c_no1").innerHTML=c_number
+    document.getElementById("c_bill1").innerHTML=c_bill
+
+   
+
 
     document.getElementById("noodles1").innerHTML = noodles
     document.getElementById("lays1").innerHTML = lays
     document.getElementById("oreo1").innerHTML = oreo
 
     document.getElementById("noodles2").innerHTML = noodles*50 
-    document.getElementById("lays2").innerHTML =lays*60
-    document.getElementById("oreo2").innerHTML = oreo*80;
+    document.getElementById("lays2").innerHTML =lays*10
+    document.getElementById("oreo2").innerHTML = oreo*20;
 
     document.getElementById("total").innerHTML = noodles*50 + lays*10 + oreo*20;
 
