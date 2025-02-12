@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tree</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function treerec(n){
+    if(n>0)
+        {
+            console.log("tree " + n);
+            treerec(n-1)
+            treerec(n-1)
+        }
+     }
+
+
+     function treerec(n){
+        if(n>0)
+            {
+                console.log(n)
+                treerec(n-1)
+                treerec(n-1)
+            }
+     }
+
+
+
+treerec(4)
+</script>
+</html>
