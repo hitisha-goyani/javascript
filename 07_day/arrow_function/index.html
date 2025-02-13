@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow_function</title>
+</head>
+
+
+<body>
+
+    <div style="border:1px solid red;" id="web">
+
+    </div>
+    
+</body>
+
+
+
+<script>
+
+let input =1;
+
+document.getElementById("web").innerHTML = input ? success() : error();
+
+
+const success = () =>{
+    return "<h1> login successful</h1>";
+}
+
+const error = () =>
+{
+    return "<h2>there is error</h2>";
+}
+
+
+</script>
+</html>
