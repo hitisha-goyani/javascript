@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    let arr = [1,"first",true];
+
+    console.log(arr)
+
+    console.log(arr.indexOf("first"))
+
+    for(let i=0;i<arr.length;i++){
+
+        console.log(arr[i])
+
+    }
+
+    let data = [11,22,33,44,55,66,77] ;
+
+
+    //start index , end index
+
+    console.log("slice")
+    console.log(data.slice(1,5));
+
+
+    //start index ,no.of element
+
+    console.log("splice")
+    console.log(data.splice(1,5));
+
+
+    console.log(data)
+
+
+    arr.push("two")
+    arr.push(3)
+
+    arr.unshift("one")
+    arr.shift()
+
+    console.log(arr)
+
+// some method
+
+    function check(h){
+        return h % 2 == 1;
+    }
+
+
+    console.log(data.some(check));
+
+    console.log("****************")
+
+    let name=["red","black"]
+
+    console.log(name)
+    let names = ["red", "and", "white"]
+
+
+console.log(names)
+
+let names2 = names.join("_");
+console.log(names2)
+console.log(names2.split("_"))
+
+
+console.log(typeof(names2))
+
+
+
+let snacks = ["edly", "dosa", "menduwada"]
+let food = ["rice", "rotli", "shak"]
+let fruits = ["apple", "banana"]
+
+
+let items = snacks.concat(food, fruits)
+console.log(items)
+
+let things = [["edly", "dosa", "menduwada"], "gujrati thali", ]
+
+things.push(snacks, food)
+console.log(things[0])
+
+console.log("**************")
+
+let merged = things.flat()
+console.log(merged)
+
+
+
+let vehicle = []
+let bike = ["splender", "shine", "unicorn"]
+let car = ["swift", "city", "ciaz"]
+let scooter = ["activa", "pleasure", "access"]
+
+vehicle.push(bike, car, scooter)
+
+console.log(vehicle)
+console.log(vehicle.flat())
+
+ vehicle = [...bike, ...car, ...scooter]
+
+ let veh = [...bike]
+
+console.log(veh)
+
+
+
+    
+</script>
+</html>
