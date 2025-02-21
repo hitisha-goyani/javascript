@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let product ={
+    name:"oppo ",
+    price:34000,
+    rating:4.2,
+    emi : () => `<h4> phone:${this.name}</h4>`
+}
+
+    document.write(`phone:<b>${product.name}</b>`)
+    
+    document.write(product.emi())
+
+
+</script>   
+</html>
