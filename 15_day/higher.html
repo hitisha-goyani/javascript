@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+</body>
+
+<script>
+ let data= [
+        {
+            title : "t-shirt",
+            price : 2000,
+            type : "cloth"
+        },
+        {
+            title : "shirt",
+            price : 1500,
+            type : "cloth"
+        },
+        {
+            title : "phone",
+            price : 20000,
+            type : "electronics"
+        },
+        {
+            title : "cookies",
+            price : 50,
+            type : "grossery"
+        },
+        {
+            title : "laptop",
+            price : 50000,
+            type : "electronics"
+        },
+        {
+            title : "wafer",
+            price : 75,
+            type : "grossery"
+        },
+    ]
+
+    console.log(data)
+
+    data = data.filter((ele2) => ele2.type == "electronics")
+
+    console.log(data)
+
+    data.forEach((ele2) => document.write(`<table border> <tr> <td>${ele2.title}</td><td>${ele2.price}</td><td>${ele2.type}</td></tr></table>`))
+</script>
+</html>
