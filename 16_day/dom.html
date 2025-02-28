@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+
+    <h1 id="head">this is head</h1>
+
+    <button onclick="change()"> change color</button>
+
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eos perspiciatis saepe numquam velit et, optio deserunt quis.</p>
+
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia eos perspiciatis saepe numquam velit et, optio deserunt quis.</p>
+    
+
+
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+    <button id="yellow">yellow</button>
+    <button id="pink">pink</button>
+</body>
+<script>
+
+    let element_id = document.getElementById("head")
+
+    console.log(element_id)
+
+    let element_tag = document.getElementsByTagName("h1")
+
+    console.log(element_tag)
+
+    let element_class = document.getElementsByClassName("para")
+
+    console.log(element_class)
+
+    let element_query = document.querySelector(".para")
+    console.log(element_query)
+
+
+    let element_query_all = document.querySelectorAll(".para")
+    console.log(element_query_all)
+
+    let body_color = document.querySelector("body")
+
+
+    // element_id.style.color="orange"
+
+    element_class[0].style.color="red"
+
+
+    function change(){
+
+        element_id.style.color="green"
+        element_id.style.backgroundColor="yellow"
+    }
+
+    function changecolor1(){
+
+        body_color.style.backgroundColor="orange"
+       
+
+    }
+
+    function changecolor2(){
+
+        body_color.style.backgroundColor="green"
+
+    }
+    function changecolor3(){
+
+        body_color.style.backgroundColor="yellow"
+
+    }
+    function changecolor4(){
+
+        body_color.style.backgroundColor="pink"
+
+    }
+
+
+    
+
+    
+    let orange = document.getElementById("orange").onclick = changecolor1
+    let green = document.getElementById("green").onclick = changecolor2
+    let yellow = document.getElementById("yellow").onclick = changecolor3
+    let pink = document.getElementById("pink").onclick = changecolor4
+
+    
+
+
+</script>
+</html>
