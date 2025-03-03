@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slider</title>
+    <link rel="stylesheet" href="fonts/remixicon.css">
+
+    <style>
+
+        .container{
+            width:1000px;
+            margin:auto;
+            /* border:1px solid blue; */
+            display: flex;
+            align-items: center;
+        }
+        .main-slider{
+            /* border:1px solid green; */
+            overflow-x: auto;
+        }
+
+        .sub-slider{
+            /* border: 1px solid red; */
+            width: 6000px;
+            display: flex;
+            transition:all 0.4s;
+        }
+        .slider{
+            width:100%;
+            /* border:1px solid yellow; */
+        }
+        .slider img{
+            width:100%;
+        }
+        button i{
+            font-size: 20px;
+        }
+        .text-center{
+            text-align: center;
+        }
+        .pt-20{
+            padding-top: 20px;
+        }
+        .ms-10{
+            margin-left: 10px;
+        }
+        .me-10{
+            margin-right: 10px;
+        }
+        .me-5{
+            margin-right: 5px;
+        }
+      
+      
+
+    </style>
+</head>
+
+
+<div>
+    <h1 class="text-center">Slider</h1>  
+    <div class="container">
+        <button onclick="prev()" class="me-10"><i class="ri-arrow-left-line"></i></button>
+        <div class="main-slider">
+            <div class="sub-slider">
+                <div class="slider">
+                    <img src="image/1.jpg">
+                </div>
+                <div class="slider">
+                    <img src="image/2.jpg">
+                </div>
+                <div class="slider">
+                    <img src="image/3.jpg"> 
+                </div>
+                <div class="slider">
+                    <img src="image/4.jpg">
+                </div>
+                <div class="slider">
+                    <img src="image/5.jpg">
+                </div>
+                <div class="slider">
+                    <img src="image/6.jpg">
+                </div>
+            </div>
+        </div>
+        <button onclick="next()" class="ms-10"><i class="ri-arrow-right-line"></i></button>
+    </div>
+    <div class="text-center pt-20">
+            <button onclick="first(0)" class="me-5 ">1</button>
+            <button onclick="first(1)" class="me-5">2</button>
+            <button onclick="first(2)" class="me-5 ">3</button>
+            <button onclick="first(3)" class="me-5 ">4</button>
+            <button onclick="first(4)" class="me-5 ">5</button>
+            <button onclick="first(5)" class="me-5 ">6</button>
+    </div>
+    
+
+</body>
+<script>
+
+    let slider = document.querySelector(".sub-slider");
+    
+    let n=0;
+
+    function next(){
+
+        if(n < 5){
+            n++;
+            slider.style.transition=`all 0.4s`;
+         
+        }
+        else{
+
+            n = 0;
+            slider.style.transition='all 0s';
+        }
+        slider.style.transform=`translateX(-${1000*n}px)`;
+    }
+
+
+    function prev(){
+
+        if(n>0){
+            n--;
+            slider.style.transition=`all 0.4s`;
+
+        }
+        else{
+            n=5;
+            slider.style.transition='all 0s';
+
+        }
+        slider.style.transform=`translateX(-${1000*n}px)`;
+    }
+
+    function first(n){
+        slider.style.transform=`translateX(-${1000*n}px)`;
+
+    }
+
+
+
+</script>
+</html>
