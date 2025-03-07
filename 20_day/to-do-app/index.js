@@ -58,6 +58,8 @@ function changeStatus(e){
 // change task ended//
 
 
+
+
 // delete task started //
 
 function taskdelete(e){
@@ -68,6 +70,8 @@ function taskdelete(e){
 }
 
 //delete task ended //
+
+
 
 // edit task started
 
@@ -117,7 +121,7 @@ function showTask(array){
         btn_delete.innerHTML=  `<i class="ri-delete-bin-5-line"></i>`
         btn_delete.setAttribute("class", "btn btn-danger btn-sm")
 
-        td_status.append(checkbox);
+        // td_status.append(checkbox);
         td_edit.append(btn_edit)
         td_delete.append(btn_delete)
 

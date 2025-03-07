@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+<body>
+    <input type="text" id="username"  placeholder="enter username" />
+    <br/>
+    <br/>
+    <input type="text" id="email" placeholder="enter email" />
+    <br/>
+    <br/>
+    <input type="text" id="password" placeholder="enter password" />
+    <br/>
+    <br/>
+    <button onclick="login()">login</button>
+    <button onclick="clear()">clear</button>
+
+    <hr>
+    <hr>
+
+    <div id="head"></div>
+</body>
+
+<script>
+
+let username = document.getElementById("username");
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+
+let head = document.getElementById("head")
+
+let arr= JSON.parse(localStorage.getItem("users")) || []
+
+
+
+function login(){
+
+    let obj={
+
+        username:username.value,
+        email:email.value,
+        password:password.value
+
+    }
+    arr.push(obj);
+    localStorage.setItem("users",JSON.stringify(arr))
+
+
+   
+}
+
+function clear(){
+
+    localStorage.clear()
+}
+
+
+function showdata(){
+
+
+    arr.map((ele)=>{
+
+        const tag=`
+        <p>username:${ele.username}</p>
+        <p>email:${ele.email}</p>
+        <p> password: ${ele.password}</p> <hr/>`
+
+
+        head.innerHTML += tag
+
+        console.log(tag)
+
+    })
+}
+
+showdata()
+
+
+
+
+</script>
+</html>

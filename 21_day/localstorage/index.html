@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local storage</title>
+</head>
+
+
+<body>
+ 
+    <input type="text" id="username" placeholder="enter username" />
+    <button onclick="login()">login</button>
+
+
+    <div id="head"></div>
+    
+</body>
+
+
+
+
+<script>
+
+let username =document.getElementById("username");
+let head = document.getElementById("head");
+
+
+let name="full stack";
+
+let user={
+
+    name:"mina",
+    email:" mina@gmail.com",
+    phone:890764567
+
+}
+
+let data=[1,2,3,4,5]
+
+localStorage.setItem("n",name)
+
+localStorage.setItem("user",JSON.stringify(user))
+
+localStorage.setItem("data",JSON.stringify(data))
+
+
+let d= localStorage.getItem("data")
+
+console.log(JSON.parse(d))
+
+localStorage.removeItem("n")
+
+localStorage.clear()
+
+
+
+
+// let ls = {
+//     user :{
+//             name: "alishan",
+//             email: "alishan@gmail.com",
+//             phone: 5759657594587
+//          },
+//      name: "alishan shaikH",
+//      data: [{}, {}]
+
+// }
+
+
+
+
+</script>
+
+</html>
