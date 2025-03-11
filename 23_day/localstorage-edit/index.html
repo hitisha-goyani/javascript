@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>localstorage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="fonts/remixicon.css">
+</head>
+
+
+<body>
+
+    <div class="container border border-secondary px-4 py-3 my-3 ">
+        <div class="row">
+            <div class="col text-center">
+            <h3 class="text-center">HK Product</h3>
+            <input class="mb-3 mt-3" type="img" id="img" name=" " placeholder="enter url "><br>
+            <input  class="mb-3" type="text" id="item" placeholder="enter item name"><br>
+            <input  class="mb-3" type="text" id="price" placeholder="enter price "><br>
+            <input  class="mb-3" type="text" id="rate" placeholder="enter rate "><br>
+
+            <button onclick="add()" class=" py-2 px-4 btn btn-outline-secondary  text-black">add </button>
+          
+         </div>       
+        </div>
+  
+    </div>
+  
+   
+
+
+    <div class="row" id="show">
+       
+    </div>
+    
+
+</body>
+
+
+<script>
+
+    let show = document.getElementById("show")
+
+    let arr = JSON.parse(localStorage.getItem("arr")) || []
+
+  
+    function setlocal(array){
+
+                localStorage.setItem("arr",JSON.stringify(array)) 
+
+                showitem(arr)
+
+                location.reload()
+
+}
+
+let img= document.getElementById("img")
+let item =document.getElementById("item")
+let price = document.getElementById("price")
+let rate = document.getElementById("rate")
+    
+
+    function add(){
+        if(document.getElementById("img").value=="") return;
+        
+        let obj = {
+                id:Math.round(Math.random()*1000),
+                img:img.value,
+                item:item.value,
+                price:price.value,  
+                rate:rate.value
+        }
+
+        if(img.name != ""){
+
+            let newArr = arr.map((ele)=>{
+                if(ele.id == img.name)
+                {
+                    ele = obj
+                }
+
+                return ele
+            })
+
+            setlocal(newArr)
+
+        }
+        else{
+            arr.push(obj)
+            
+            setlocal(arr)
+        }
+
+        // console.log(obj)
+        // arr.push(obj)
+        // //  console.log(arr)
+        // setlocal(arr)
+        // location.reload()
+      
+      
+    }
+
+   
+
+    function del(id){
+
+        let newarr = arr.filter((ele)=> ele.id != id)
+    
+
+        setlocal(newarr)
+        // location.reload()
+    }
+    function edit(id){
+
+        let newObj = arr.find((ele)=> ele.id == id)
+        console.log(newObj)
+        img.value - newObj.img
+        item.value = newObj.item
+        price.value = newObj.price
+        rate.value = newObj.rate
+        img.name = id;
+
+    }
+
+    function showitem(){
+
+        show.innerHTML=""
+
+        arr.map((ele)=> {
+
+            const card=`
+
+                 <div class="col-3 p-2">
+                    <div class="card position-relative p-5" >
+                    <button onclick="del(${ele.id})" class="btn btn-danger rounded-circle position-absolute" style="right:10px; top:10px;"><i class="ri-delete-bin-line"></i> </button>
+                    <img src="${ele.img}" class="card-img-top img-fluid" alt="..." >
+                    <div class="card-body">
+                        <b  class="card-title">${ele.price}</b>
+                        <b class="card-text">${ele.item}</b>
+                          <b class="card-text">${ele.rate}</b>
+                        <a onlick="edit(${ele.id})" class="btn btn-light btn-sm">🖊️</a>
+                        <button class="btn btn-secondary btn-sm w-50">more</button>
+                    </div>
+                    </div>
+                    </div>`
+
+                    show.innerHTML +=card                                 
+        })
+        
+    }
+    showitem(arr) 
+   
+</script>
+</html>
