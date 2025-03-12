@@ -15,11 +15,19 @@
     <div class="container my-5 ">
         <div class="mx-auto d-flex gap-2 p-3 shadow rounded-4 bg-info-subtle" style="max-width: 500px">
             <input type="text" placeholder="Add Task" class="form-control" id="task"/>
+            <select class="form-control w-25" id="priority">
+            <option value="1">High</option>
+            <option value="2">Media</option>
+            <option value="3">low</option>
+        </select>
             <button class="btn btn-info " id="add">Add</button>
         </div>
     </div>
 
     <div class="container overflow-hidden  rounded-4 p-3 bg-info-subtle" style="box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;">
+        <div class="container">
+            <div class="btn btn-black" onclick="sorting()">sort</div>
+          </div>
         <table class="table">
             <thead class="">
                 <tr>

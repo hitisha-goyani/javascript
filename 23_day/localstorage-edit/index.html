@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col text-center">
             <h3 class="text-center">HK Product</h3>
-            <input class="mb-3 mt-3" type="img" id="img" name=" " placeholder="enter url "><br>
+            <input class="mb-3 mt-3" type="img" id="img" name="" placeholder="enter url "><br>
             <input  class="mb-3" type="text" id="item" placeholder="enter item name"><br>
             <input  class="mb-3" type="text" id="price" placeholder="enter price "><br>
             <input  class="mb-3" type="text" id="rate" placeholder="enter rate "><br>
@@ -73,6 +73,8 @@ let rate = document.getElementById("rate")
                 rate:rate.value
         }
 
+        console.log(obj)
+
         if(img.name != ""){
 
             let newArr = arr.map((ele)=>{
@@ -85,6 +87,7 @@ let rate = document.getElementById("rate")
             })
 
             setlocal(newArr)
+        
 
         }
         else{
@@ -116,7 +119,7 @@ let rate = document.getElementById("rate")
 
         let newObj = arr.find((ele)=> ele.id == id)
         console.log(newObj)
-        img.value - newObj.img
+        img.value = newObj.img
         item.value = newObj.item
         price.value = newObj.price
         rate.value = newObj.rate
@@ -140,7 +143,7 @@ let rate = document.getElementById("rate")
                         <b  class="card-title">${ele.price}</b>
                         <b class="card-text">${ele.item}</b>
                           <b class="card-text">${ele.rate}</b>
-                        <a onlick="edit(${ele.id})" class="btn btn-light btn-sm">🖊️</a>
+                        <a onclick="edit(${ele.id})" class="btn btn-light btn-sm">🖊️</a>
                         <button class="btn btn-secondary btn-sm w-50">more</button>
                     </div>
                     </div>
