@@ -1,0 +1,35 @@
+#arrow{
+    transform-origin: right;
+   animation: rot 10s infinite linear;
+}
+ /* 
+@keyframes rot {
+    from{
+        rotate: 0deg;
+    }
+    to{
+        rotate: 360deg;
+    }
+} */
+
+.clock{
+    background-image: url("https://i.pinimg.com/736x/6d/bb/32/6dbb32261afb0097eff4305214ecce7b.jpg");
+    background-size: cover;
+}
+.img{
+    background-image: url("img/3.avif");
+    background-size: cover;
+}
+
+.shaking{
+    animation: shake 0.1s infinite linear alternate;
+}
+
+@keyframes shake {
+    from{
+        rotate: -10deg;
+    }
+    to{
+        rotate: 10deg;
+    }
+}

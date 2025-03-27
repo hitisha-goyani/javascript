@@ -11,7 +11,9 @@ let arrow = document.getElementById("arrow")
  }, 1000)
  
 
-
+ function clearing(){
+    clearInterval(t)
+    }
 
  let val = e.target.value
  setTimeout(function(){

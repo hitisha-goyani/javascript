@@ -12,17 +12,21 @@
                 transform-origin:right;
                 animation:rot 10s infinite linear;
             }
-            @keyframes rot {
+            /* @keyframes rot {
              from{
                  rotate: 0deg;
              }
              to{
                  rotate: 360deg;
              }
-         }  
+         }   */
 
             .clock{
                 background-image: url("https://i.pinimg.com/736x/6d/bb/32/6dbb32261afb0097eff4305214ecce7b.jpg");
+                background-size: cover;
+            }
+            .img{
+                background-image: url("https://media.designcafe.com/wp-content/uploads/2020/01/21001549/living-room-wall-decor-ideas.jpg");
                 background-size: cover;
             }
 
@@ -41,18 +45,19 @@
     </style>
 </head>
 <body >
-   <div class="container p-5 ">
-    <div>
-        <input type="number" class="form-control form-control-sm w-25" id="value"/>
+   <div class="container p-5 border mt-5  img">
+    <div class="">
+        <input type="number" class="form-control form-control-sm w-25 mb-3" id="value"/>
     </div>
     <div id="clock" class="clock border border-2 border-dark rounded-circle d-flex justify-center align-items-center" style="width:200px;height:200px;">
         <div id="arrow" class="border border-2 border-danger w-50"></div>
     </div>
-   </div> 
 
-   <div class="border">
+
+   <div class=" text-center w-25 pt-4" style="">
     <button onclick="clearing()" class="btn btn-success btn-sm">clear</button>
    </div>
+   </div>
 </body>
-<script src="script.js"></script>
+<script src="index.js"></script>
 </html>
