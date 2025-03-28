@@ -1,5 +1,5 @@
 #arrow{
-    transform-origin: right;
+    transform-origin:right;
    animation: rot 10s infinite linear;
 }
  /* 
@@ -13,11 +13,12 @@
 } */
 
 .clock{
-    background-image: url("https://i.pinimg.com/736x/6d/bb/32/6dbb32261afb0097eff4305214ecce7b.jpg");
+    background-image: url("img/1.png");
     background-size: cover;
+   
 }
 .img{
-    background-image: url("img/3.avif");
+    background-image: url("https://png.pngtree.com/background/20230411/original/pngtree-simple-and-elegant-layout-of-off-white-living-room-picture-image_2387804.jpg");
     background-size: cover;
 }
 
