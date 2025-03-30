@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>clock</title>
+    <title>Clock</title>
     <link rel="stylesheet" href="index.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body class="img">
-    <div class="container-fluid p-5  d-flex flex-column gap-3 align-items-center mt-5 " >
+    <div class="container-fluid p-5 d-flex flex-column gap-3 align-items-center mt-5">
         <div class="d-flex gap-1 w-25" style="padding-left: 150px;">
-            <input type="number" class="form-control form-control-sm w-25" id="time" />
+            <input type="number" class="form-control form-control-sm w-25" id="time">
             <button onclick="start()" class="btn btn-success btn-sm">Start</button>
         </div>
 
-        <div id="clock" class="clock border border-2 border-dark rounded-circle d-flex justify-center align-items-center" style="width: 200px; height: 200px;">
-            <div id="arrow" class="border border-2 border-danger w-50"></div>
+        <div id="clock" class="clock border border-2 border-dark rounded-circle d-flex justify-content-center align-items-center" style="width: 200px; height: 200px; position: relative;">
+            <div id="arrow" style="width:4px; height:50px; background-color:#22100E; position: absolute; bottom: 50%; left: 50%; transform-origin: bottom;"></div>
         </div>
 
-
-        <div class=" text-center">
-            <button active class="js btn btn-primary btn-sm" >bummer</button>
+        <div class="text-center">
+            <button class="js btn btn-primary btn-sm">Bummer</button>
             <button onclick="stoping()" class="btn btn-danger btn-sm">Stop</button>
         </div>
 
         <audio src="alarm_15.mp3"></audio>
-    
     </div>
-    
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
+    <script src="index.js"></script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.2.0/dist/confetti.browser.min.js"></script>
-<script src="index.js"></script>
 </html>
+,
