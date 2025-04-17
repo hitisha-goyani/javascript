@@ -14,20 +14,39 @@ fetch(url)
  function showStates(resp){ 
     resp.data.regional.map((st) =>{
         document.querySelector(".states").innerHTML += `<option value="${st.loc}" >${st.loc}</option>`
-
-        // card.innerHTML =`
-        // <h4>${resp.loc}</h4>
-        // <p>${resp.confirmedCasesForeign}</p>`
-                  
     })
 
-
+  
+                  
     document.querySelector(".states").onchange=function(e){
-    console.log(e.target.value)
+        let data = resp.data.regional.filter((st) => st.loc == e.target.value)  
 
-        let data = resp.data.regional.filter((st) => st.loc == e.target.value)
-                   
         console.log(data)
+        
+        card.innerHTML =`
+        <div class="row g-2 p-2 bg-white" >
+            <h4>${data[0].loc}</h4>
+                        <div class="col-6">
+                         <div class="shadow p-2 rounded-2" >   
+                            <p>Foreigncase:${data[0].confirmedCasesForeign}</p>
+                            </div>
+                        </div>
+                           
+                        
+                          <div class="col-6">
+                         <div class="shadow p-2 rounded-2" > 
+                            <p>Indiancase:${data[0].confirmedCasesIndian  }</p>
+                            </div>
+                        </div>
+
+                           <div class="col-6">
+                         <div class="shadow p-2 rounded-2" > 
+                            <p>Deaths:${data[0].deaths  }</p>
+                            </div>
+                        </div>
+                           
+                        </div>
+        `
     }
  }
 
@@ -38,12 +57,12 @@ fetch(url)
 
 
 
-fetch(url)
-.then((res)=>res.json())
-.then((res)=> {
-    // console.log(res)
-    showdata(res)
-})
+// fetch(url)
+// .then((res)=>res.json())
+// .then((res)=> {
+//     // console.log(res)
+//     showdata(res)
+// })
 
 
 
