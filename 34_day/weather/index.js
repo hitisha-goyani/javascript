@@ -3,7 +3,7 @@
 
 
  let api_key = '1709c9e37240d686e3ff7678dde4d81e'
-
+ 
 
  let cityInput = document.querySelector("#city")
  let card = document.querySelector("#weatherCard")
@@ -42,7 +42,7 @@ function showWeather(data){
                     <h4>${data.name}</h4>
                     <p>${data.weather[0].main}</p>
                     <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" />
-                    <div class="row g-2 p-2" style="background-color:rgb(124, 175, 238)" >
+                    <div class="row g-2 p-2"  >
                         <div class="col-6">
                         <div class="d-flex">
                          <div class="shadow p-2 rounded-2" style="background-color:rgb(145, 223, 253)">
@@ -55,7 +55,7 @@ function showWeather(data){
                         </div>
                         <div class="col-6">
                          <div class="d-flex">
-                            <div class="shadow p-2 rounded-2" style="background-color:rgb(78, 136, 216)">
+                            <div class="shadow p-2 rounded-2 " style="background-color:rgb(78, 136, 216)">
                                 <i class="ri-windy-line fs-3"></i>
                                 wind : ${data.wind.speed} m/s
                             </div>
@@ -86,24 +86,24 @@ function showWeatherList(ele){
     
     ele.list.map((data)=>{
         list.innerHTML += `
-             <div class="row my-2 shadow-md">
-                          <div class="col-2">
+             <div class="row my-2 shadow-md justify-content-center rounded-2">
+                          <div class="col-2 border border-white rounded-2 me-2">
                               <p>${data.dt_txt}</p>
                           </div>
-                          <div class="col-2">
+                          <div class="col-2 border border-white rounded-2 me-2">
                               <b>${data.weather[0].main}</b>
                               <img src="http://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="">
                           </div>
                           
-                          <div class="col-2">
+                          <div class="col-2 border border-white rounded-2 me-2">
                               <i class="ri-temp-hot-line"></i>
                               Temp : ${(data.main.temp - 273.15).toFixed(2)} &deg;c
                           </div>
-                          <div class="col-2">
+                          <div class="col-2 border border-white rounded-2 me-2">
                               <i class="ri-windy-line"></i>
                                       wind : ${data.wind.speed} m/s
                           </div>
-                          <div class="col-2">
+                          <div class="col-2 border border-white rounded-2 me-2">
                               <div class="shadow p-2">
                                   <i class="ri-water-percent-line"></i>
                                   <br/>

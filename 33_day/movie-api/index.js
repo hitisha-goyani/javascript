@@ -1,5 +1,7 @@
 let search = document.getElementById("search")
 let movies = document.getElementById("movies")
+
+
 search.addEventListener("keyup", function(e){
     getMovies(e.target.value)
 })
@@ -16,6 +18,7 @@ function getMovies(search){
         
     })
 }
+
 
 
 
