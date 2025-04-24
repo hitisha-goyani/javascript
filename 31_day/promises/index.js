@@ -102,7 +102,7 @@ fetch('https://randomuser.me/api?results=500')
 .finally(() => {
     loading = false
 })
-
+     
 
 if(loading)
 {

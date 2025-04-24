@@ -16,11 +16,44 @@
 
 
 import card from "./card.js"
-import {userdata} from "./index.js"
+import fetchapi from "./modules/fetch_api.js";
 let users = document.getElementById("users")
 
-userdata.results.map((ele)=>{
-    users.innerHTML += `<div class="col-3">${card(ele.picture.large,ele.name.first,ele.city,ele.gender)}</div>`
+const showLoading = () => {
+                users.innerHTML = `
+                    <div class="d-flex flex-column align-items-center">
+                        <img width="400px" src="https://i.pinimg.com/originals/8a/c1/29/8ac12962c05648c55ca85771f4a69b2d.gif" />
+                        <h3>Loading..!</h3>
+                    </div>
+                `;
+            };
+
+            const showError = () => {
+                document.body.innerHTML = `
+                    <div class="text-center">
+                        <img width="400px" src="https://i.pinimg.com/originals/e4/30/10/e430101033efff9a294eaafecbac846a.gif" />
+                        <h3>Something went wrong while fetching products!</h3>
+                    </div>
+                `;
+            };
+
+const loadProducts = async () => {
+                showLoading();
+                try {
+                    const { data } = await fetchapi('https://randomuser.me/api?results=5');
+                    users.innerHTML = "";
+
+            data.results.map((ele)=>{
+
+            users.innerHTML += `<div class="col-3">
+        ${card(ele.picture.large,ele.name.first,ele.city,ele.gender)}</div>`
 })
+} catch (err) {
+                    console.error("Error fetching products:", err);
+                    showError();
+                }
+            };
+
+            loadProducts();
 </script>
 </html>
