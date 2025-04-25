@@ -1,9 +1,28 @@
 {
-    "users" :[
-        {
-            "id":1,
-            "name":"abc",
-            "age":22
-        }
-    ]
+  "user": [
+    {
+      "id": 1,
+      "name": "AMit",
+      "age": 22,
+      "pic": "https://media.licdn.com/dms/image/v2/D4D03AQExcedDL36HLw/profile-displayphoto-shrink_200_200/B4DZV6RQUtHkAY-/0/1741513100062?e=2147483647&v=beta&t=UmUn_uiCLG5V7C_okoV7Q7oYi7rkFyMHBk9uq-v9wSw"
+    },
+    {
+      "id": "b9bc",
+      "name": "Hitisha Goyani",
+      "age": "22",
+      "pic": "https://rapidapi.com/hub/_next/image?url=https%3A%2F%2Frapidapi-prod-apis.s3.amazonaws.com%2F76f357af-5961-43d2-8dd8-15683986f748.jpg&w=3840&q=75"
+    },
+    {
+      "id": "b3c6",
+      "name": "Vibhuti jadav",
+      "age": "22",
+      "pic": "https://t4.ftcdn.net/jpg/06/04/52/07/360_F_604520780_fJ9qm5G0kfzfkATe8XF8PUWudiv0vYHJ.jpg"
+    },
+    {
+      "id": "6b0b",
+      "name": "Arra",
+      "age": "22",
+      "pic": "https://media.gettyimages.com/id/1438623675/photo/smartphone-phone-call-and-business-woman-with-smile-for-career-opportunity-online-feedback-on.jpg?s=612x612&w=gi&k=20&c=DXmallFxSNGqa7Kwx-D1r-POhXcfUJ88d9Ih2KUplRg="
+    }
+  ]
 }
