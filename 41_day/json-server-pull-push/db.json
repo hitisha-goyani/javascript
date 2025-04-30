@@ -1,0 +1,16 @@
+{
+    "user": [
+      {
+        "id": "2",
+        "name": "Vibhuti jadav",
+        "age": "22",
+        "pic": "https://t4.ftcdn.net/jpg/06/04/52/07/360_F_604520780_fJ9qm5G0kfzfkATe8XF8PUWudiv0vYHJ.jpg"
+      },
+      {
+        "id": "940",
+        "name": "james bond",
+        "age": 10,
+        "pic": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXUv6ZrOiS4QQaWCBlsw2zbj64_mcv8Bk-ZCLwDSWLznS_Iu2bxfnet_eaChBoikcPoCc&usqp=CAU"
+      }
+    ]
+  }
